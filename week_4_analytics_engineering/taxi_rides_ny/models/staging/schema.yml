@@ -4,17 +4,18 @@ version: 2
 sources:
     - name: staging
       #For bigquery:
-      #database: taxi-rides-ny-339813
+      database: de-zoomcamp-2023-375809 
 
       # For postgres:
-      database: production
+      # database: production
 
       schema: trips_data_all
 
       # loaded_at_field: record_loaded_at
       tables:
-        - name: green_tripdata
-        - name: yellow_tripdata
+        - name: external_green_tripdata
+        - name: external_yellow_tripdata
+        - name: external_fhv_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
 
